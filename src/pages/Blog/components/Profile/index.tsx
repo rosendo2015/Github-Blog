@@ -8,7 +8,7 @@ import { faUserGroup } from '@fortawesome/free-solid-svg-icons/faUserGroup'
 export function Profile() {
   return (
     <ProfileCoontainer>
-      <ProfilePicture src={'https://github.com/rosendc30.png'} />
+      <ProfilePicture src={'https://github.com/SteveJones.png'} />
 
       <ProfileDetails>
         <header>
