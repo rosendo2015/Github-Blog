@@ -10,4 +10,34 @@ export const PostHeaderContainer = styled.section`
   padding: 2rem;
   display: flex;
   flex-direction: column;
+
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+  h1 {
+    color: ${({ theme }) => theme.colors['base-title']};
+    font-size: ${({ theme }) => theme.textSizes['title-title-l']};
+    line-height: 130%;
+    margin-bottom: 0.5rem;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: ${({ theme }) => theme.colors['base-span']};
+    line-height: 0px;
+    svg {
+      color: ${({ theme }) => theme.colors['base-label']};
+    }
+  }
 `
