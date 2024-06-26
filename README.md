@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Desafio 03 do ignite: Integração com API do GitHub.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![preview](./public/github/preview.png)
 
-Currently, two official plugins are available:
+> Trilha Ignite Projeto feito para cumprir desafio Blog Github - Rocketseat :rocket:.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## :hammer_and_wrench: Tecnologias
 
-## Expanding the ESLint configuration
+- React JS
+- Styled Components
+- Git e Github
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## :nut_and_bolt: Neste projeto aprendi
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Semântica em HTML
+- Box Model
+- Acessibilidade
+- Tags semanticas
+- Entidade que regulamenta a semantica no Brasil [W3C](https://www.w3c.br/Padroes/WebSemantica)
+- Conceito da programação chamado <b>REFATORAÇÃO</b>: mudar algo interno na página sem estragar o que esta funcionando, é feito com a intenção de melhorar algo interno no código do site.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Trabalhamos com alinhamento e espaçamento dos elementos
+
+- Pseudo classes
+
+- background linear-gradient
+- Analizar um projeto com design feito no Figma;
+- Usar fontes do Google Fonts;
+- Posicionar os elementos na tela usando a propriedade
+ <strong>position: absolute, relative e fixed</strong>;
+
+
+## :mailbox_closed: Contatos
+
+> Email - rosendc30@gmail.com
+
+> Linkedin - https://www.linkedin.com/in/francisco-rosendo-a05623241/# rocketnews
