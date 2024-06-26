@@ -45,15 +45,11 @@ export function Blog() {
       <Profile />
       <SearchInput postsLength={posts.length} getPosts={getPosts} />
 
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        <PostsListContainer>
-          {posts.map((post) => (
-            <Post key={post.number} post={post} />
-          ))}
-        </PostsListContainer>
-      )}
+      <PostsListContainer>
+        {posts.map((post) => (
+          <Post key={post.number} post={post} />
+        ))}
+      </PostsListContainer>
     </>
   )
 }

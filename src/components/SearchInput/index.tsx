@@ -23,6 +23,7 @@ export function SearchInput({ postsLength, getPosts }: SearchInputProps) {
         <h3>Publicações</h3>
         <span>{postsLength} publicações</span>
       </header>
+
       <input type="text" placeholder="Buscar conteúdo" {...register('query')} />
     </SearchInputContainer>
   )

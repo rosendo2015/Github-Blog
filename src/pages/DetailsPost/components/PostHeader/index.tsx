@@ -8,39 +8,56 @@ import {
   faComment,
 } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
-
-export function PostHeader() {
+import { IPost } from '../../../Blog'
+import { Spinner } from '../../../../components/Spinner'
+import { relativeDateFormatter } from '../../../../utils/formater'
+interface PostHeaderProps {
+  postData: IPost
+  isLoading: boolean
+}
+export function PostHeader({ isLoading, postData }: PostHeaderProps) {
   const navigate = useNavigate()
   function goBack() {
     navigate(-1)
   }
-
+  const formatedDate = relativeDateFormatter(postData?.created_at)
   return (
     <PostHeaderContainer>
-      <header>
-        <ExternalLink
-          as="button"
-          onClick={goBack}
-          icon={<FontAwesomeIcon icon={faChevronLeft} />}
-          text="Voltar"
-          variant="iconLeft"
-        />
-        <ExternalLink text="Ver no Github" href="#" />
-      </header>
-      <h1>JavaScript data types and data structures</h1>
-      <ul>
-        <li>
-          <FontAwesomeIcon icon={faGithub} />
-          cameronwll
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faCalendar} />
-          Há 1 dia
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faComment} />5 comentários
-        </li>
-      </ul>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
+          <header>
+            <ExternalLink
+              as="button"
+              onClick={goBack}
+              icon={<FontAwesomeIcon icon={faChevronLeft} />}
+              text="Voltar"
+              variant="iconLeft"
+            />
+            <ExternalLink
+              text="Ver no Github"
+              href={postData.html_url}
+              target="_blank"
+            />
+          </header>
+          <h1>{postData.title}</h1>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faGithub} />
+              {postData.user.login}
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faCalendar} />
+              {formatedDate}
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faComment} />
+              {postData.comments} comentários
+            </li>
+          </ul>
+        </>
+      )}
     </PostHeaderContainer>
   )
 }
