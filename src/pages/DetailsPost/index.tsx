@@ -16,7 +16,7 @@ export function DetailsPost() {
     try {
       setIsLoading(true)
       const response = await api.get(
-        `/repo/${username}/${repoName}/issues/${id}`,
+        `/repos/${username}/${repoName}/issues/${id}`,
       )
       setPostData(response.data)
     } finally {
