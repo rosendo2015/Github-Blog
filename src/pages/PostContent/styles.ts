@@ -12,4 +12,13 @@ export const PostContentContainer = styled.div`
   h3 {
     color: ${({ theme }) => theme.colors['brand-blue']};
   }
+  pre {
+    background: ${({ theme }) => theme.colors['base-post']};
+    padding: 1rem;
+    > div {
+      background: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
 `

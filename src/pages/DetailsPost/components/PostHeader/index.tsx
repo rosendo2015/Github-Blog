@@ -23,41 +23,37 @@ export function PostHeader({ isLoading, postData }: PostHeaderProps) {
   const formattedDate = relativeDateFormatter(postData?.created_at)
   return (
     <PostHeaderContainer>
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        <>
-          <header>
-            <ExternalLink
-              as="button"
-              onClick={goBack}
-              icon={<FontAwesomeIcon icon={faChevronLeft} />}
-              text="Voltar"
-              variant="iconLeft"
-            />
-            <ExternalLink
-              text="Ver no Github"
-              href={postData.html_url}
-              target="_blank"
-            />
-          </header>
-          <h1>{postData.title}</h1>
-          <ul>
-            <li>
-              <FontAwesomeIcon icon={faGithub} />
-              {postData.user.login}
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faCalendar} />
-              {formattedDate}
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faComment} />
-              {postData.comments} comentários
-            </li>
-          </ul>
-        </>
-      )}
+      <>
+        <header>
+          <ExternalLink
+            as="button"
+            onClick={goBack}
+            icon={<FontAwesomeIcon icon={faChevronLeft} />}
+            text="Voltar"
+            variant="iconLeft"
+          />
+          <ExternalLink
+            text="Ver no Github"
+            href={postData.html_url}
+            target="_blank"
+          />
+        </header>
+        <h1>{postData.title}</h1>
+        <ul>
+          <li>
+            <FontAwesomeIcon icon={faGithub} />
+            {postData.user.login}
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faCalendar} />
+            {formattedDate}
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faComment} />
+            {postData.comments} comentários
+          </li>
+        </ul>
+      </>
     </PostHeaderContainer>
   )
 }

@@ -35,41 +35,37 @@ export function Profile() {
   }, [getProfileData])
   return (
     <ProfileCoontainer>
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        <>
-          <ProfilePicture src={profileData.avatar_url} />
+      <>
+        <ProfilePicture src={profileData.avatar_url} />
 
-          <ProfileDetails>
-            <header>
-              <h1>{profileData.name}</h1>
-              <ExternalLink
-                text="Github"
-                href={profileData.html_url}
-                target="_blank"
-              />
-            </header>
-            <p>{profileData.bio}</p>
-            <ul>
+        <ProfileDetails>
+          <header>
+            <h1>{profileData.name}</h1>
+            <ExternalLink
+              text="Github"
+              href={profileData.html_url}
+              target="_blank"
+            />
+          </header>
+          <p>{profileData.bio}</p>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faGithub} />
+              <span>{profileData.login}</span>
+            </li>
+            {profileData?.company && (
               <li>
-                <FontAwesomeIcon icon={faGithub} />
-                <span>{profileData.login}</span>
+                <FontAwesomeIcon icon={faBuilding} />
+                <span>{profileData.company}</span>
               </li>
-              {profileData?.company && (
-                <li>
-                  <FontAwesomeIcon icon={faBuilding} />
-                  <span>{profileData.company}</span>
-                </li>
-              )}
-              <li>
-                <FontAwesomeIcon icon={faUserGroup} />
-                <span>{profileData.followers} seguidores</span>
-              </li>
-            </ul>
-          </ProfileDetails>
-        </>
-      )}
+            )}
+            <li>
+              <FontAwesomeIcon icon={faUserGroup} />
+              <span>{profileData.followers} seguidores</span>
+            </li>
+          </ul>
+        </ProfileDetails>
+      </>
     </ProfileCoontainer>
   )
 }
