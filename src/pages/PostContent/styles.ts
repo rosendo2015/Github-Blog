@@ -12,6 +12,10 @@ export const PostContentContainer = styled.div`
   h3 {
     color: ${({ theme }) => theme.colors['brand-blue']};
   }
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
   pre {
     background: ${({ theme }) => theme.colors['base-post']};
     padding: 1rem;
